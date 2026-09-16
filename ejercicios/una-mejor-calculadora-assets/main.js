@@ -35,12 +35,13 @@ function multiplicarMultiplesNumeros(numeros) {
 }
 
 function esPar(numero) {
-  if (numero % 2 === 0) {
-    numero = true;
-  } else {
-    numero = false;
-  }
-  return numero;
+  // if (numero % 2 === 0) {
+  //   numero = true;
+  // } else {
+  //   numero = false;
+  // }
+
+  return Number.isInteger(numero) && numero % 2 === 0;
 }
 
 function esEntero(numero) {
