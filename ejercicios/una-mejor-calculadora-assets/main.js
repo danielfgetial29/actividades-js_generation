@@ -6,18 +6,24 @@ let listNumbers = [1, 2, 3, 4];
 let numeroEvaluar = 11;
 
 // llamado a la funcion
-sumarMultiplesNumeros(listNumbers);
-multiplicarMultiplesNumeros(listNumbers);
-esPar(numeroEvaluar);
-esEntero(numeroEvaluar);
+console.log(sumarMultiplesNumeros(listNumbers));
+console.log(multiplicarMultiplesNumeros(listNumbers));
+console.log(esPar(numeroEvaluar));
+console.log(esEntero(numeroEvaluar));
 
 // Funciones requeridas para la calificación automática
 function sumarMultiplesNumeros(numeros) {
-  let valorSuma = 0;
-  for (const numero of numeros) {
-    valorSuma += numero;
-  }
-  return valorSuma;
+  // let valorSuma = 0;
+  // for (const numero of numeros) {
+  //   valorSuma += numero;
+  // }
+  // return valorSuma;
+
+  // usando.reduce();
+  const suma = numeros.reduce((acumulador, numero) => {
+    return acumulador + numero;
+  }, 0);
+  return suma;
 }
 
 function multiplicarMultiplesNumeros(numeros) {
@@ -38,12 +44,13 @@ function esPar(numero) {
 }
 
 function esEntero(numero) {
-  if (numero % 1 === 0) {
-    numero = true;
-  } else {
-    numero = false;
-  }
-  return numero;
+  // if (numero % 1 === 0) {
+  //   numero = true;
+  // } else {
+  //   numero = false;
+  // }
+
+  return Number.isInteger(numero);
 }
 
 // Exportar funciones para pruebas (estilo Node.js)
