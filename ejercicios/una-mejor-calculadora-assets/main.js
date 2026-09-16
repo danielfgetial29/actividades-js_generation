@@ -1,26 +1,49 @@
 function principal() {
   console.log("¡Hola, estudiantes!");
 }
+//Entradas de las funciones
+let listNumbers = [1, 2, 3, 4];
+let numeroEvaluar = 11;
+
+// llamado a la funcion
+sumarMultiplesNumeros(listNumbers);
+multiplicarMultiplesNumeros(listNumbers);
+esPar(numeroEvaluar);
+esEntero(numeroEvaluar);
 
 // Funciones requeridas para la calificación automática
 function sumarMultiplesNumeros(numeros) {
-  // TODO: Implementa esta función
-  // Debe recibir un arreglo de números y devolver su suma
+  let valorSuma = 0;
+  for (const numero of numeros) {
+    valorSuma += numero;
+  }
+  return valorSuma;
 }
 
 function multiplicarMultiplesNumeros(numeros) {
-  // TODO: Implementa esta función
-  // Debe recibir un arreglo de números y devolver el producto de multiplicarlos todos entre sí
+  let total = 1;
+  for (const numero of numeros) {
+    total *= numero;
+  }
+  return total;
 }
 
 function esPar(numero) {
-  // TODO: Implementa esta función
-  // Debe devolver true si el número es un entero par, false en caso contrario
+  if (numero % 2 === 0) {
+    numero = true;
+  } else {
+    numero = false;
+  }
+  return numero;
 }
 
 function esEntero(numero) {
-  // TODO: Implementa esta función
-  // Debe devolver true si el número es un entero, false en caso contrario
+  if (numero % 1 === 0) {
+    numero = true;
+  } else {
+    numero = false;
+  }
+  return numero;
 }
 
 // Exportar funciones para pruebas (estilo Node.js)
