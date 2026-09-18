@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")({ sigint: true });
 /*
-    PRACTICA DE JAVASCRIPT 
+    PRACTICA DE JAVASCRIPT
     Temas a desarrollar: Metodos de Arrays, Switch y Bucles
 */
 // Ejercicio 1: Operador Ternario
@@ -27,3 +27,42 @@ console.log();
 
 // Ejercicio 3 control de flujo con switch
 console.log("---- Ejercicio 2 -----");
+
+let diaSemana = prompt("Ingresa un dia de la semana: ").toLowerCase();
+
+switch (diaSemana) {
+  case "lunes":
+  case "martes":
+    console.log("Inicio de semana");
+    break;
+
+  case "viernes":
+    console.log("¡Por fin es fin de semana!");
+    break;
+
+  case "miercoles":
+  case "jueves":
+    console.log("Día laboral estandar");
+    break;
+
+  default:
+    console.log("Por favor ingresar un dato valido");
+    break;
+}
+console.log();
+// mismo ejercicio usando if..else if, else
+
+console.log("usando if..else if, else");
+
+const inicioSemana = ["lunes", "martes"];
+const medioSemana = ["miercoles", "jueves"];
+
+if (inicioSemana.includes(diaSemana)) {
+  console.log("Inicio de Semana");
+} else if (medioSemana.includes(diaSemana)) {
+  console.log("Día laboral estandar");
+} else if (diaSemana === "viernes") {
+  console.log("Por fin fin de semanaaa!!");
+} else {
+  console.log("Por favor ingresar un dia valido");
+}
