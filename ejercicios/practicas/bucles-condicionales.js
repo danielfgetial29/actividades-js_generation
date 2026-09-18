@@ -66,3 +66,20 @@ if (inicioSemana.includes(diaSemana)) {
 } else {
   console.log("Por favor ingresar un dia valido");
 }
+
+console.log();
+
+//Ejerciciop 4
+console.log("--- Ejercicio 4: Bucles y Number.isInteger ----");
+
+const datos = [15, "hola", 3.14, 42, true, 8];
+
+for (const i of datos) {
+  if (Number.isInteger(i)) {
+    console.log(i);
+  }
+}
+
+// for (const i of datos) {
+//   console.log("Numeros: ", Number.isInteger(i));
+// }
