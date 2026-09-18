@@ -17,7 +17,7 @@ console.log("---- Ejercicio 2 -----");
 const frutas = ["manzana", "banana", "kiwi", "uva", "mango"];
 
 let elementoEliminado = frutas.pop();
-let seleccion = frutas.slice(1, 2);
+let seleccion = frutas.slice(1, 3);
 frutas.unshift("fresa");
 
 console.log(`Eliminaste a "${elementoEliminado}" de la lista`);
@@ -26,7 +26,7 @@ console.log(`Lista completa ${frutas}`);
 console.log();
 
 // Ejercicio 3 control de flujo con switch
-console.log("---- Ejercicio 2 -----");
+console.log("---- Ejercicio 3 -----");
 
 let diaSemana = prompt("Ingresa un dia de la semana: ").toLowerCase();
 
@@ -74,9 +74,9 @@ console.log("--- Ejercicio 4: Bucles y Number.isInteger ----");
 
 const datos = [15, "hola", 3.14, 42, true, 8];
 
-for (const i of datos) {
-  if (Number.isInteger(i)) {
-    console.log(i);
+for (const dato of datos) {
+  if (Number.isInteger(dato)) {
+    console.log(dato);
   }
 }
 
