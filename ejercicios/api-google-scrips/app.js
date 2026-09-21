@@ -1,6 +1,9 @@
+const path = require("path");
+// Sube niveles desde la ubicación de app.js hasta llegar al .env
+require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
 // app.js
 // URL del Web App de Google Apps Script (completar esta línea)
-const URL_API = "_______________________________________________________";
+const URL_API = process.env.API_SHEET;
 
 // Función para enviar un mensaje (nombre y correo) al servidor
 async function enviarMensaje(nombre, correo) {
