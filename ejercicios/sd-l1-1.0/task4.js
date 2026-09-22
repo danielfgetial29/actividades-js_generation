@@ -1,7 +1,7 @@
 // Consulta la Tarea 4 en tus Instrucciones para completar esta tarea
 
 for (let i = 0; i < 106; i++) {
-  if (i % 3 === 0 && i % 5 === 0 && i && i % 7 === 0) {
+  if (i % 3 === 0 && i % 5 === 0 && i % 7 === 0) {
     console.log("FizzBuzzWoof");
   } else if (i % 3 === 0 && i % 7 === 0) {
     console.log("FizzWoof");
