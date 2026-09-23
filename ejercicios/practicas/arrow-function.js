@@ -56,3 +56,19 @@ const vip = invitados.find((invitado) => invitado.startsWith("VIP"));
 const all_vip = invitados2.filter((invitado) => invitado.startsWith("VIP"));
 console.log("usando .find()", vip);
 console.log("usando .filter()", all_vip);
+
+/*
+ * Verifica si al menos una de las temperaturas supera el límite crítico
+ * de 50 grados. Debes usar el método .some() con una función flecha para
+ * obtener un resultado true o false.
+ */
+
+console.log("\nAlerta de emergencia\n");
+const temperaturas = [35, 38, 42, 50, 49, 40];
+const criticas = temperaturas.some((temperatura) => temperatura >= 50);
+
+if (criticas) {
+  console.log("Alerta. Hay temperaturas criticas");
+} else {
+  console.log("Todo esta bajo control");
+}
