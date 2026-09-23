@@ -15,15 +15,16 @@ function Persona(p1, p2) {
   this.apellido = p2;
 
   this.nombreCompleto = function () {
-    return `Mi nombre es${this.nombre} ${this.apellido}`;
+    return `Mi nombre es ${this.nombre} ${this.apellido}`;
   };
 }
 
 // instancia de la funcion persona
 const persona1 = new Persona("Julian", "Rodriguez");
+console.log(persona1.nombreCompleto());
 
 // clase persona
-class Persona {
+class Personas {
   // El constructor inicializa las propiedades del objeto
   constructor(nombre, edad) {
     this.nombre = nombre;
