@@ -40,4 +40,19 @@ const adultos_ordenado = adultos.toSorted((a, b) => a - b);
 console.log(`Edades adultas en la lista edades: ${adultos}`);
 
 console.log(`Arreglo adultos ordenado por edades: '${adultos_ordenado}'`);
-console.log(`cantidad de adultos: ${adultos.length}`);
+console.log(`cantidad de adultos: ${adultos.length}\n`);
+
+console.log("Buscando el VIP\n");
+/**
+ * Encuentra y guarda en una variable el primer nombre que comience con el texto "VIP_"
+ * usando el método .find() y una funcion flecha
+ */
+const invitados = ["Carlos", "Ana", "Beto", "VIP_Laura", "Eduardo"];
+const invitados2 = ["Carlos", "VIP_Ana", "Beto", "VIP_Laura", "Eduardo"];
+// .find() encontramos la primera coincidencia y devolvemos un strg
+const vip = invitados.find((invitado) => invitado.startsWith("VIP"));
+
+// .filter() encuentra todas las coincidencias y devuelve un array
+const all_vip = invitados2.filter((invitado) => invitado.startsWith("VIP"));
+console.log("usando .find()", vip);
+console.log("usando .filter()", all_vip);
