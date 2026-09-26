@@ -1,3 +1,1 @@
-export function rubricaAprobadoReprobado() {
-
-}
+export function rubricaAprobadoReprobado() {}

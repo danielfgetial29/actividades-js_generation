@@ -1,3 +1,1 @@
-export function rubricaPerfecto() {
-
-}
+export function rubricaPerfecto() {}

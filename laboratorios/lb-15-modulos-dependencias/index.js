@@ -18,7 +18,7 @@ if (process.argv[3]) {
 } else {
   console.log("Por favor, ejecuta tu archivo de tarea directamente en node.");
   console.log("Ejemplo: node task1.js");
-};
+}
 
 switch (tarea) {
   case 1:
@@ -27,7 +27,11 @@ switch (tarea) {
     break;
   case 2:
     globalThis.NombresAmigos = tarea2.NombresAmigos;
-    let nombresEntrada = new NombresAmigos(process.argv[3], process.argv[4], process.argv[5]);
+    let nombresEntrada = new NombresAmigos(
+      process.argv[3],
+      process.argv[4],
+      process.argv[5],
+    );
     console.log(nombresEntrada);
     break;
   case 3:
@@ -42,7 +46,10 @@ switch (tarea) {
     let edad = hoy.getFullYear() - cumpleanos.getFullYear();
     let elMes = hoy.getMonth() - cumpleanos.getMonth();
 
-    if (elMes < 0x0 || 0x0 === elMes && hoy.getDate() < cumpleanos.getDate()) {
+    if (
+      elMes < 0x0 ||
+      (0x0 === elMes && hoy.getDate() < cumpleanos.getDate())
+    ) {
       edad--;
     }
 
@@ -65,14 +72,17 @@ switch (tarea) {
     let edad4 = hoy4.getFullYear() - cumpleanos4.getFullYear();
     let mes4 = hoy4.getMonth() - cumpleanos4.getMonth();
 
-    if (mes4 < 0x0 || 0x0 === mes4 && hoy4.getDate() < cumpleanos4.getDate()) {
+    if (
+      mes4 < 0x0 ||
+      (0x0 === mes4 && hoy4.getDate() < cumpleanos4.getDate())
+    ) {
       edad4--;
     }
 
     let respuestaEsperada4 = "¡" + nombre + " tiene " + edad4 + " años hoy!";
 
     if (salida === respuestaEsperada4) {
-      console.log('Exitoso');
+      console.log("Exitoso");
     }
 
     break;

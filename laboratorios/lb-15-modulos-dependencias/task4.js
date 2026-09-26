@@ -1,3 +1,1 @@
-export class EdadAmigo {
-
-}
+export class EdadAmigo {}
