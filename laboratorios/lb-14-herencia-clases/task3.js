@@ -3,6 +3,10 @@ export class Jugador {
     this.nombre = nombre;
     this.nivel = nivel;
   }
+  /**
+   * metood para mostrar las propiedades de nomnbre
+   * y nivel
+   */
   informacion() {
     console.log(`${this.nombre} ha alcanzado el Nivel ${this.nivel}!`);
   }
