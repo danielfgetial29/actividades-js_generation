@@ -18,8 +18,7 @@ export class Jugador {
    *
    */
   subirNivel() {
-    let nivel_aumentado = this.nivel + 1;
-    return nivel_aumentado;
+    return this.nivel++;
   }
 }
 
@@ -29,5 +28,10 @@ let player_level = process.argv[3];
 
 // instancia de la clase
 const jugador1 = new Jugador(player_name, player_level);
+
+// llamamos los metodos para que se puedan ejecutar
 jugador1.informacion();
+jugador1.subirNivel(); // si no lo llamaos nunca realizara la suma
+
+// simplemente mostramos el dato nuevo
 console.log(jugador1.subirNivel());
