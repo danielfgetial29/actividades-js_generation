@@ -1,5 +1,3 @@
 export class NombresAmigos {
-  constructor() {
-
-  }
+  constructor() {}
 }

@@ -1,3 +1,1 @@
-export function calculadoraEdad() {
-
-}
+export function calculadoraEdad() {}
