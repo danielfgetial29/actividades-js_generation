@@ -1,0 +1,10 @@
+/* # --> se usa el # para aplicar estilos a los id*/
+#titulo-h1 {
+  color: blue;
+}
+
+/* . --> se usa el punto . para aplicar estilos alas clases las cuales se 
+agrupan para algo especifico*/
+.titulo-h2 {
+  color: violet;
+}
