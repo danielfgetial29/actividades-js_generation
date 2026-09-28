@@ -3,9 +3,8 @@ html {
   width: 100%;
 }
 
-/* Aqui solo le aplico el estilo unicamente a la id titulo-principal que es 
-un atributo h1 */
-#titulo-principal {
+/* Aplicar el color rojo solo al id="rojo" h1 */
+#rojo {
   color: red;
 }
 
@@ -13,4 +12,12 @@ un atributo h1 */
 estoy haciendo que TODAS las etiquetas H1 tengan color verde */
 h1 {
   color: green;
+}
+/* Aplicar el color azul a la clase "azul" */
+.azul {
+  color: blue;
+}
+/* Para al poner el mouse sobre la etiqueta aparezca el cursos */
+#cambiar-color {
+  cursor: pointer;
 }
