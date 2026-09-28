@@ -2,3 +2,15 @@ html {
   height: 100%;
   width: 100%;
 }
+
+/* Aqui solo le aplico el estilo unicamente a la id titulo-principal que es 
+un atributo h1 */
+#titulo-principal {
+  color: red;
+}
+
+/* 
+estoy haciendo que TODAS las etiquetas H1 tengan color verde */
+h1 {
+  color: green;
+}
