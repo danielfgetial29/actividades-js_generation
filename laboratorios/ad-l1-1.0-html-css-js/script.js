@@ -18,3 +18,16 @@ changeColor.addEventListener("click", () => {
     changeColor.style.color = "brown";
   }
 });
+
+// muerstra un texto cada que presionas un boton
+
+const btnPrincipal = document.getElementById("btn-de-ejemplos");
+const showText = document.getElementById("texto-a-aparecer");
+
+btnPrincipal.addEventListener("click", () => {
+  if (showText.textContent === "") {
+    showText.textContent = "Has presionado el Boton";
+  } else {
+    showText.textContent = "";
+  }
+});
