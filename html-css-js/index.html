@@ -7,12 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MiPrimeraWeb</title>
     <link rel="stylesheet" href="/style.css" />
+    <script defer src="script.js"></script>
   </head>
   <body>
     <h1 id="titulo-h1">Hola a todos desde un h1</h1>
 
     <h2 class="titulo-h2">Hola mundo desde un h2</h2>
 
-    <script src="script.js"></script>
+    <!--Boton-->
+    <button id="btnSaludar">Saludar</button>
+    <p id="mensaje"></p>
+
+    <!--Parrafos--->
+    <p class="texto">Uno</p>
+    <p class="texto">Dos</p>
+    <p class="texto">Tres</p>
+
+    <!---Inputs-->
+    <form>
+      <ul>
+        <li>
+          <label for="user-id">User ID</label>
+          <input type="text" id="u-id" name="uid" />
+        </li>
+        <li>
+          <label for="pwd">Password</label>
+          <input type="password" id="pwd" name="pwd" />
+        </li>
+        <li>
+          <button id="btn-login">Log in</button>
+        </li>
+        <p id="valueId"></p>
+        <p id="valuePassword"></p>
+      </ul>
+    </form>
+    <!-- <input type="text" /> -->
+    <!-- <script src="script.js"></script> -->
   </body>
 </html>
