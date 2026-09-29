@@ -1,0 +1,27 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* Aplicar el color rojo solo al id="rojo" h1 */
+#rojo {
+  color: red;
+}
+
+/* 
+estoy haciendo que TODAS las etiquetas H1 tengan color verde */
+h1 {
+  color: green;
+}
+/* Aplicar el color azul a la clase "azul" */
+.azul {
+  color: blue;
+}
+/* Para al poner el mouse sobre la etiqueta aparezca el cursos */
+#cambiar-color {
+  cursor: pointer;
+}
+
+#btn-de-ejemplos {
+  cursor: pointer;
+}
