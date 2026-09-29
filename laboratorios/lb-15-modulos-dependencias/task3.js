@@ -3,7 +3,7 @@ let mesNacimiento = Number(process.argv[3]);
 let diaNacimiento = Number(process.argv[4]);
 
 const edad = calculadoraEdad(anionNacimiento, mesNacimiento, diaNacimiento);
-console.log(edad);
+// console.log(edad);
 
 /**
  * Funcion que permite calcular la edad de una persona ingresando
