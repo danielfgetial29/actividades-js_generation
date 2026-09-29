@@ -11,20 +11,26 @@ const prompt = PromptSync();
 
 console.log("=== Solicitar Numeros ===\n");
 
+// varaibles donde obtengo los numeros
 const num1 = Number(prompt("Ingresa el primer numero: "));
 const num2 = Number(prompt("Ingresa el segundo numero: "));
 const num3 = Number(prompt("Ingresa el tercer numero: "));
 
+// guardo todos los numeros en una lista
 const numerosIngresados = [num1, num2, num3];
 
+// condicion para poder identificar si los numeros son iguales
 if (num1 === num2 && num2 === num3) {
   console.log(`\nLos numeros son iguales: ${numerosIngresados}`);
-} else {
+} // si no son iguales avanza con la ejecucion del codgio
+else {
   console.log(`\nLos numeros ingresados fueron: ${numerosIngresados}\n`);
 
+  //Variables donde organizo los numeros usando los metodos toSorted() y toReversed()
   const menorMayor = numerosIngresados.toSorted((a, b) => a - b);
   const mayorMenor = menorMayor.toReversed();
 
+  // muestro los arreglos ordenados en la consola
   console.log(`Numeros de mayor a menor: ${mayorMenor}\n`);
   console.log(`Numeros de menor a mayor: ${menorMayor}`);
 }
