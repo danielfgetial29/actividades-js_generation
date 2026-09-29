@@ -1,0 +1,41 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#alr-burger {
+  cursor: pointer;
+}
+
+/* funciona para agregar un color al momento de pasar el cursor */
+#alr-burger:hover {
+  color: goldenrod;
+  cursor: pointer;
+}
+/* estilo del contenedor */
+#img-burger {
+  width: 10%;
+  height: 100%;
+
+  margin: 10px;
+  padding: 20px 30px 5px 15px;
+
+  /* background-color: grey;
+  border-radius: 10px; */
+}
+
+/* estilo solo a la imagen */
+#img-burger img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+/* estilo sobre la imagen */
+#img-burger img:hover {
+  /* mueve la imagen hacia arriba */
+  transform: translateY(-5px);
+}
+.arroz {
+  cursor: pointer;
+}
