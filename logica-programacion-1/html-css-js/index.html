@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogicaProgramacion1</title>
+  </head>
+  <body>
+    <!-- contenedor principal  -->
+    <div class="principal-box">
+      <!-- bloque para el titulo del formulario -->
+      <div class="titulo-formulario">
+        <h2>Registrar Información</h2>
+      </div>
+
+      <!-- bloque principal del formulario -->
+      <div class="box-formulario">
+        <!-- inicio de la etiqueta del formulario -->
+        <form>
+          <!-- bloque para cada label e input -->
+          <div class="form-campos">
+            <label for="numero-1">Primer Numero</label>
+            <input
+              type="text"
+              id="num1"
+              name="numero-1"
+              placeholder="Escribe un numero"
+            />
+          </div>
+          <div class="form-campos">
+            <label for="numero-2">Segundo Numero</label>
+            <input
+              type="text"
+              id="num2"
+              name="numero-2"
+              placeholder="Escribe un numero"
+            />
+          </div>
+          <div class="form-campos">
+            <label for="numero-3">Tercer Numero</label>
+            <input
+              type="text"
+              id="num3"
+              name="numero-3"
+              placeholder="Escribe un numero"
+            />
+          </div>
+
+          <!-- bloque para el boton  -->
+          <div class="save-boton">
+            <button id="save-btn">Guardar</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- bloque para mostrar resultados -->
+      <div class="results-box">
+        <p id="valueNum1"></p>
+        <p id="valueNum2"></p>
+        <p id="valueNum3"></p>
+      </div>
+    </div>
+  </body>
+</html>
