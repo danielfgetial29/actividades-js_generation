@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MiPrimeraWeb </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <div id="focus">
+
+        </div>
+
+        <div id="titulos">
+            <h1> <strong>Propiedad position</strong> </h1>
+            <h2>Haz <span>click</span> en los divs para obtener mas informacion</h2>
+        </div>
+        
+        <div id="id-div-1" class="div-grupos" onclick="clickDiv1()">
+            <p>div 1 position: realtive</p> 
+        </div>
+        <div id="id-div-2" class="div-grupos" onclick="clickDiv2()">
+            <p>div 2 - position: sticky</p> 
+            
+        </div>
+        
+        <div id="id-div-3" class="div-grupos" onclick="clickDiv3()">
+            <p>div 3 position: relative</p>
+            
+            
+            <div id="id-div-4" class="div-grupos" onclick="clickDiv4(event)"> <!--el parametro se tiene que llamar obligatoriamente 'event' en el archivo html-->
+                <p>div 4 position: absolute</p>
+            </div>
+        </div>
+        
+        <h2 id="final-h2">¿Logras identificar el contenedor que usa fixed? <span id="si" onclick="mostrarFixedSi()">Si</span>/<span id="no" onclick="mostrarFixedNo()">No</span> </h2>
+
+        <script src="script.js">  </script>
+    </body>
+</html>
