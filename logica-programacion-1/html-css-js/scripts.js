@@ -43,6 +43,7 @@ botonGuardar.addEventListener("click", (event) => {
 
       console.log("Numeros ordenados correctamente...");
 
+      //Muestro en el HTML los arrays ordenados segun el ejercicio
       resultado_MayorMenor.textContent = mayorMenor.join(", ");
       resultado_MenorMayor.textContent = menorMayor.join(", ");
 
