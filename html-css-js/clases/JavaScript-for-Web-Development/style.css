@@ -1,0 +1,17 @@
+h1{
+    color: red;
+}
+
+
+/* # -> se refiere al ID*/
+#titulo-h1{
+    color: blue;
+}
+
+/* . -> se refiere al CLASE*/
+.titulo-h2{
+    color: blueviolet;
+}
+
+
+/*  */

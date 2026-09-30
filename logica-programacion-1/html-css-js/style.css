@@ -1,0 +1,87 @@
+body {
+  background-color: #f3f4f6;
+  font-family: sans-serif;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+/* div principal */
+.principal-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border: 5px solid grey;
+  border-radius: 12px;
+}
+
+/* Título */
+.titulo-formulario h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: black;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Formulario*/
+form {
+  display: grid;
+  gap: 16px; /*espacio de separacion de elementos */
+}
+
+/* Cada bloque de etiqueta y su input */
+.form-campos {
+  display: grid;
+  gap: 6px; /* Espacio entre el texto de la etiqueta y su caja de texto */
+}
+
+.form-campos label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: black;
+}
+
+.form-campos input {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Efecto visual cuando se hace clic en un input */
+.form-campos input:focus {
+  border-color: #2563eb;
+}
+
+/* Estilos del Botón */
+.save-boton button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.save-boton button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Bloque de resultados  */
+.results-box {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.results-box p {
+  margin: 8px 0;
+  color: #374151;
+  font-size: 0.95rem;
+}
