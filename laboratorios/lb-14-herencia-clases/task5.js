@@ -25,15 +25,15 @@ export class Jugador {
   ganarExperiencia(cantidad) {
     const EXPERIENCIA_POR_NIVEL = 100;
 
-    let experiencia_acumulada = cantidad;
-
     // cantidad = Number(prompt("Ingresa tu cantidad de experiencia: "));
     this.experiencia += cantidad;
     if (this.experiencia >= EXPERIENCIA_POR_NIVEL) {
-      this.subirNivel();
-      return `Eh subido al nivel ${this.nivel}`;
+      do {
+        this.subirNivel();
+      } while (this.experiencia <= EXPERIENCIA_POR_NIVEL);
+      return `He subido al nivel ${this.nivel}`;
     } else {
-      return `Aun me falta experiencia para subir de nivle`;
+      return `Aun me falta experiencia para subir de nivel`;
     }
   }
 }
@@ -41,8 +41,9 @@ export class Jugador {
 // Variables
 let player_name = process.argv[2];
 let player_level = process.argv[3];
-let player_XP = process.argv[4];
+let player_XP = Number(process.argv[4]);
 
 const jugador1 = new Jugador(player_name, player_level, player_XP);
 
 console.log(jugador1.ganarExperiencia(50));
+console.log(jugador1.experiencia);
