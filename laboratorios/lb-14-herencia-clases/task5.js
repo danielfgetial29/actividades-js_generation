@@ -14,6 +14,7 @@ export class Jugador {
   }
   /**
    * Aumenta el nivel del jugador
+   *
    */
   subirNivel() {
     return this.nivel++;
