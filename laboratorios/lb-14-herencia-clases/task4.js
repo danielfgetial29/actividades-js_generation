@@ -18,7 +18,7 @@ export class Jugador {
    *
    */
   subirNivel() {
-    this.nivel++;
+    return ` Felicidades, ${this.nombre}, ha aumentado al nivel ${this.nivel++};`;
   }
 }
 
@@ -30,8 +30,9 @@ let player_level = process.argv[3];
 const jugador1 = new Jugador(player_name, player_level);
 
 // llamamos los metodos para que se puedan ejecutar
-console.log(jugador1.informacion()); // para llamar el retunr y mostrarlo en la pantalla
+console.log(jugador1.informacion()); // para llamar el return y mostrarlo en la pantalla
 jugador1.subirNivel(); // si no lo llamaos nunca realizara la suma
 
 // // simplemente mostramos el dato nuevo
-console.log(jugador1.nivel);
+// console.log(jugador1.nivel);
+console.log(jugador1.subirNivel());

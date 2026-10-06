@@ -4,7 +4,7 @@ export class Jugador {
     this.nivel = nivel;
   }
   /**
-   * metood para mostrar las propiedades de nomnbre
+   * metodo para mostrar las propiedades de nombre
    * y nivel
    */
   informacion() {
