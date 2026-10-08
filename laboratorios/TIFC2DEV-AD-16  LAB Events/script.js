@@ -1,11 +1,15 @@
 // Capturar elementos
+//Elementos tarea1
 const parrafo = document.getElementById("parrafo");
 const btnChangeStyle = document.getElementById("botonEstilo");
 
 // Formulario
+//Elementos tarea 2
 const formulario = document.getElementById("form1");
 
-// valores del formulario desde
+// Elementos tarea 3
+const btnInfoEnlaces = document.getElementById("botonEnlaces");
+const enlaces = document.querySelectorAll("a");
 
 //Tarea 1- Modificar el estilo del texto del párrafo
 // aplicar toggler para cambiar de estilo
@@ -74,3 +78,14 @@ function sendData() {
 }
 
 sendData();
+
+// Tarea 3 - Mostrar alerta con información de enlaces
+
+btnInfoEnlaces.addEventListener("click", () => {
+  console.log("Boton de informacion de enlaces clickeado");
+  alert(`
+    Numer de enlaces: ${enlaces.length}
+    Primer enlace: ${enlaces[0]}
+    Ultimo enlace: ${enlaces[enlaces.length - 1]}
+    `);
+});
