@@ -26,6 +26,7 @@ function converKelvin(numero) {
   const gradKelvin = numero + 273.15;
   return gradKelvin;
 }
+converKelvin(inputTemperatura);
 
 /**
  * Convierte los grados Celsius a grados
@@ -56,14 +57,19 @@ function showData(campo, num1, num2) {
   gradosFahrenheit.textContent = num2;
 }
 
-// function enviarData() {
-//   btnEnviar.addEventListener("submit", (event) => {
-//     event.preventDefault();
+function enviarData() {
+  btnEnviar.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-//     const datosCorrectos = verificarData(inputTemperatura);
+    const datosCorrectos = verificarData(inputTemperatura);
 
-//     if(!datosCorrectos){
+    converKelvin(inputTemperatura);
+    converFahrenheit(inputTemperatura);
 
-//     }
-//   });
-// }
+    if (!datosCorrectos) {
+      showData(inputTemperatura, gradKelvin, gradFahrenheit);
+    }
+  });
+}
+
+enviarData();
