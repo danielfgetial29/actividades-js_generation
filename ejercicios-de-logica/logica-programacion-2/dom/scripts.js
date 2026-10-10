@@ -1,75 +1,74 @@
-const inputTemperatura = document.getElementById("texto-temperatura").value;
-const btnEnviar = document.getElementById("btn-enviar");
+// Referencias a los elementos HTML
+const formulario = document.getElementById("form-temperatura");
+const inputTemperatura = document.getElementById("texto-temperatura");
 
-function verificarData(campo) {
-  console.log(
-    "Ejecutandose funcion que valida el campo tenga contenido valido y no este vacio",
-  );
-  const valor = campo;
+const numeroIngresado = document.getElementById("numeroIngresado");
+const gradosKelvin = document.getElementById("gradosKelvin");
+const gradosFahrenheit = document.getElementById("gradosFahrenheit");
 
-  if (!valor || Number.isInteger(Number(valor))) {
-    console.log("El campo esta vacio o no es un numero entero..");
-    return true;
+// Valida que el campo tenga un número entero
+
+function verificarData(valor) {
+  if (valor.trim() === "") {
+    return false;
   }
-  return false;
+
+  const numero = Number(valor);
+
+  return Number.isFinite(numero) && Number.isInteger(numero);
 }
 
 /**
- * Funcion que convierte un numero a grados
- * Kelvin
+ * Convierte Celsius a Kelvin.
  * @param {number} numero
- * @returns el resultado de la conversion
+ * @returns {number}
  */
 function converKelvin(numero) {
-  console.log("Ejecutandose funcion de convertir a Kelvin");
+  console.log("conviertiendo a grados Kelvin");
 
-  const gradKelvin = numero + 273.15;
-  return gradKelvin;
+  return numero + 273.15;
 }
-converKelvin(inputTemperatura);
 
 /**
- * Convierte los grados Celsius a grados
- * Fahrenheit
+ * Convierte Celsius a Fahrenheit.
  * @param {number} numero
- * @returns el resultado de la conversion
+ * @returns {number}
  */
 function converFahrenheit(numero) {
-  console.log("Ejecutandose funcion de convertir a Fahrenheit");
+  console.log("conviertiendo datos a Fahrenheit");
 
-  const gradFahrenheit = numero * 1.8 + 32;
-  return gradFahrenheit;
+  return numero * 1.8 + 32;
 }
 
-function showData(campo, num1, num2) {
-  console.log(`Mostrando datos en la consola`);
+// Muestra los resultados en el HTML
+function showData(campo, kelvin, fahrenheit) {
+  console.log("mostrando datos en el html...");
 
-  const numeroIngresado = document.getElementById("numeroIngresado");
-  const gradosKelvin = document.getElementById("gradosKelvin");
-  const gradosFahrenheit = document.getElementById("gradosFahrenheit");
-
-  console.log(`Numero ingresado: ${campo}`);
-  console.log(`Grados Kelvin: ${num1}`);
-  console.log(`Grados Fahrenheit: ${num2}`);
-
-  numeroIngresado.textContent = campo;
-  gradosKelvin.textContent = num1;
-  gradosFahrenheit.textContent = num2;
+  numeroIngresado.textContent = `${campo} °C`;
+  gradosKelvin.textContent = `${kelvin.toFixed(2)} K`;
+  gradosFahrenheit.textContent = `${fahrenheit.toFixed(2)} °F`;
 }
 
-function enviarData() {
-  btnEnviar.addEventListener("submit", (event) => {
-    event.preventDefault();
+// Escucha el envío del formulario
+formulario.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-    const datosCorrectos = verificarData(inputTemperatura);
+  // Leer el valor actual del input
+  const valor = inputTemperatura.value;
 
-    converKelvin(inputTemperatura);
-    converFahrenheit(inputTemperatura);
+  // Validar antes de realizar los cálculos
+  if (!verificarData(valor)) {
+    alert("Ingresa una temperatura válida, sin decimales.");
+    return;
+  }
 
-    if (!datosCorrectos) {
-      showData(inputTemperatura, gradKelvin, gradFahrenheit);
-    }
-  });
-}
+  // Convertir el valor de texto a número
+  const temperatura = Number(valor);
 
-enviarData();
+  // Realizar las conversiones
+  const resultadoKelvin = converKelvin(temperatura);
+  const resultadoFahrenheit = converFahrenheit(temperatura);
+
+  // Mostrar los resultados
+  showData(temperatura, resultadoKelvin, resultadoFahrenheit);
+});
