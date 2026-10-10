@@ -36,13 +36,21 @@
 
           <!-- texto guia que indica al usuario que dato ingresar -->
           <div id="ayuda-temperatura" class="form-text">
-            Ingrese la temperatura en grados Celsius (°C).
+            Ingrese la temperatura en grados Celsius (°C) y no debe contener
+            decimales
           </div>
         </div>
 
         <!-- boton para enviar el dato -->
-        <button type="submit" class="btn-solid theme-primary">Submit</button>
+        <button type="submit" class="btn-solid theme-primary" id="btn-enviar">
+          Enviar
+        </button>
       </form>
+      <div id="resultados" class="mt-3">
+        <p id="numeroIngresado"></p>
+        <p id="gradosKelvin"></p>
+        <p id="gradosFahrenheit"></p>
+      </div>
     </div>
   </body>
 </html>
