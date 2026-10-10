@@ -26,7 +26,7 @@ function crearHTMLTarjeta(personaje){
                     <p class="nombre">${personaje.name}</p>
                     <p class="ocupacion">${personaje.occupation}</p>
                     <p class="frase">${frase}</p>
-                </div>
+    </div>
     `;
 }
 
