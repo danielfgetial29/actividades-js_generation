@@ -19,8 +19,11 @@
     <script type="modules" src="scripts.js"></script>
   </head>
   <body>
+    <!-- contenedor principal de la pagina -->
     <div class="container">
+      <!-- formulario para ingresar los grados -->
       <form>
+        <!-- input para ingresar el valor -->
         <div class="mb-3">
           <label for="texto-temperatura" class="form-label">Temperatura</label>
           <input
@@ -30,11 +33,14 @@
             aria-describedby="ayuda-temperatura"
             placeholder=" Ej. 30"
           />
+
+          <!-- texto guia que indica al usuario que dato ingresar -->
           <div id="ayuda-temperatura" class="form-text">
             Ingrese la temperatura en grados Celsius (°C).
           </div>
         </div>
 
+        <!-- boton para enviar el dato -->
         <button type="submit" class="btn-solid theme-primary">Submit</button>
       </form>
     </div>
