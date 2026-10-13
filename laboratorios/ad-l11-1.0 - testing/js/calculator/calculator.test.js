@@ -1,17 +1,24 @@
-const calculator = require('./calculator');
+const calculator = require("./calculator");
 
-test('adds 1 + 2 to equal 3', () => {
+// Pruebas para la funcion add()
+test("adds 1 + 2 to equal 3", () => {
   expect(calculator.add(1, 2)).toBe(3);
 });
 
-test('adds -4 + 8 to equal 4', () => {
+test("adds -4 + 8 to equal 4", () => {
   expect(calculator.add(-4, 8)).toBe(4);
 });
 
-test('subtract 5 - 4 to equal 1', () => {
+// Pruebas para la funcion substract()
+test("subtract 5 - 4 to equal 1", () => {
   expect(calculator.subtract(5, 4)).toBe(1);
 });
 
-test('subtract -5 - -10 to equal 5', () => {
+test("subtract -5 - -10 to equal 5", () => {
   expect(calculator.subtract(-5, -10)).toBe(5);
 });
+
+// Prueba para la funcion divide()
+test("divide");
+
+// Pruebas para la funcion multiply()
