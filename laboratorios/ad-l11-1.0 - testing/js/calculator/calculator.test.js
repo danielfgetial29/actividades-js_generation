@@ -19,19 +19,19 @@ test("subtract -5 - -10 to equal 5", () => {
 });
 
 // Prueba para la funcion divide()
-test("divide 10 / 2 sera igual a 5", () => {
-  expect(calculator.divide(10, 2)).toBe(5);
+test("divide -10 / -2 sera igual a 5", () => {
+  expect(calculator.divide(-10, -2)).toBe(5);
 });
 
-test("dividir 99 / 3 sera igual a 33", () => {
-  expect(calculator.divide(99, 3)).toBe(33);
+test("dividir 20 / 2.5 sera igual a 8", () => {
+  expect(calculator.divide(20, 2.5)).toBe(8);
 });
 
 // Pruebas para la funcion multiply()
-test("Multiplicar 50 x 3", () => {
-  expect(calculator.multiply(50, 3)).toBe(150);
+test("Multiplicar -50 x 3 debe retornar -150", () => {
+  expect(calculator.multiply(-50, 3)).toBe(-150);
 });
 
-test("Multiplicar 2 x 4", () => {
-  expect(calculator.multiply(2, 4)).toBe(8);
+test("Multiplicar 2,5 x 4 su resultado debe ser 10", () => {
+  expect(calculator.multiply(2.5, 4)).toBe(10);
 });
