@@ -35,3 +35,8 @@ test("Multiplicar -50 x 3 debe retornar -150", () => {
 test("Multiplicar 2,5 x 4 su resultado debe ser 10", () => {
   expect(calculator.multiply(2.5, 4)).toBe(10);
 });
+
+// Prueba refactorizada con la funcion de divie()
+test("divide(10, 0) debe retornar un mensaje", () => {
+  expect(calculator.divide(10, 0)).toBe("No se puede dividir entre cero");
+});

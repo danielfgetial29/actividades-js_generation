@@ -73,7 +73,7 @@ test("findById() debe retornar el usuario con ID 1", () => {
   expect(userController.findById(1)).toEqual(user);
 });
 
-// 6. findById(): ID inexistente
+// findById(): ID inexistente
 
 test("findById() debe retornar undefined si el ID no existe", () => {
   let user = new User(1, "Daniel", "daniel@gmail.com");

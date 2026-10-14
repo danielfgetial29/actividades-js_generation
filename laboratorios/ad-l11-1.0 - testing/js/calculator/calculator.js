@@ -6,6 +6,9 @@ const subtract = function (a, b) {
 };
 
 function divide(a, b) {
+  if (b === 0) {
+    return `No se puede dividir entre cero`;
+  }
   return a / b;
 }
 
