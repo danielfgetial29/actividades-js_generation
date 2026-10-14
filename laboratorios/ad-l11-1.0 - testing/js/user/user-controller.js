@@ -30,11 +30,11 @@ class UserController {
   }
 }
 
-const controlador = new UserController();
+// const controlador = new UserController();
 
-controlador.add("daniel getial");
-// console.log("usuario agregado");
+// controlador.add("daniel getial");
+// // console.log("usuario agregado");
 
-console.log("Lista de usuarios: ", controlador.getUsers());
+// console.log("Lista de usuarios: ", controlador.getUsers());
 
 module.exports = UserController;
