@@ -19,6 +19,11 @@ test("subtract -5 - -10 to equal 5", () => {
 });
 
 // Prueba para la funcion divide()
-test("divide");
+test("divide 10 / 2 sera igual a 5", () => {
+  expect(calculator.divide(10, 2)).toBe(5);
+});
 
+test("dividir 99 / 3 sera igual a 33", () => {
+  expect(calculator.divide(99, 3)).toBe(33);
+});
 // Pruebas para la funcion multiply()
