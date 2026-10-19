@@ -2,7 +2,10 @@
 // valor factorial de un numero
 
 let numero = 4;
-let factorial = 0;
-for (let contador = 0; contador <= numero; contador++) {
-  console.log(contador);
+let factorial = 1;
+
+for (let contador = 1; contador <= numero; contador++) {
+  factorial *= contador;
 }
+
+console.log(`El factorial de ${numero} es : ${factorial}`);
